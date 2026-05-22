@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #efeDEb;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background-color: #efedeb;
+  color: #101a29;
+  font-family: "Mona Sans", ui-sans-serif, system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+}
+
+main {
+  overflow: clip;
+}
+
+section[id] {
+  scroll-margin-top: 88px;
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  button,
+  input,
+  textarea,
+  select {
+    font: inherit;
+  }
+}
+
+@layer components {
+  .section-divider {
+    position: relative;
+  }
+
+  .section-divider::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 12px;
+    width: 100%;
+    background-image: repeating-linear-gradient(
+      90deg,
+      rgba(16, 26, 41, 0.12) 0,
+      rgba(16, 26, 41, 0.12) 1px,
+      transparent 1px,
+      transparent 8px
+    );
+    opacity: 0.4;
+  }
+
+  .logo-ticker {
+    mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  }
+
+  .hero-decorative-mark {
+    animation: hero-mark-spin 26s linear infinite;
+    transform-origin: center;
+  }
+}
+
+@keyframes hero-mark-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-decorative-mark {
+    animation: none;
+  }
+}
