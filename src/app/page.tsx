@@ -1,13 +1,12 @@
 import { AudienceCard } from "@/components/AudienceCard";
 import { Container } from "@/components/Container";
 import { HeroSection } from "@/components/HeroSection";
+import { HowWeWorkSection } from "@/components/HowWeWorkSection";
 import { PartnersSection } from "@/components/PartnersSection";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { ProjectCtaBanner } from "@/components/ProjectCtaBanner";
-import { SectionHeadingBlock } from "@/components/SectionHeadingBlock";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
-import { StageCard } from "@/components/StageCard";
 import { TeamSection } from "@/components/TeamSection";
 import { audienceContent, footerContent, heroContent, howWeHelpContent, projectCtaContent } from "@/data/home";
 import { footerNavigationLinks, navigationLinks, primaryNavigationCta } from "@/data/navigation";
@@ -22,20 +21,7 @@ export default function HomePage() {
       <main>
         <HeroSection {...heroContent} />
 
-        <section id="how-we-work" className="section-divider bg-gray-50 py-20 md:py-30">
-          <Container>
-            <SectionHeadingBlock
-              eyebrow={howWeHelpContent.eyebrow}
-              title={howWeHelpContent.title}
-              className="mb-12 md:mb-14"
-            />
-            <div className="space-y-4 md:space-y-6">
-              {howWeHelpContent.stages.map((stage) => (
-                <StageCard key={stage.stageNumber} {...stage} />
-              ))}
-            </div>
-          </Container>
-        </section>
+        <HowWeWorkSection {...howWeHelpContent} />
 
         <section id="who-we-work-with" className="section-divider bg-blue-300 pb-16 pt-14 text-white md:pb-20 md:pt-20">
           <Container>

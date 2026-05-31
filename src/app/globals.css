@@ -38,7 +38,7 @@ main {
 }
 
 section[id] {
-  scroll-margin-top: 88px;
+  scroll-margin-top: 96px;
 }
 
 @layer base {
@@ -90,6 +90,12 @@ section[id] {
     animation: hero-mark-spin 26s linear infinite;
     transform-origin: center;
   }
+
+  .hero-outline-mark-spin {
+    animation: hero-mark-spin 42s linear infinite;
+    transform-origin: center;
+    will-change: transform;
+  }
 }
 
 @keyframes hero-mark-spin {
@@ -104,6 +110,10 @@ section[id] {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-decorative-mark {
+    animation: none;
+  }
+
+  .hero-outline-mark-spin {
     animation: none;
   }
 }

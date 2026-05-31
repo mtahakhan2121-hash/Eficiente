@@ -7,7 +7,7 @@ type StageVisualProps = {
 
 export function StageVisual({ asset, title }: StageVisualProps) {
   return (
-    <div className="relative h-[160px] overflow-hidden rounded-md bg-stage-01 md:h-[220px]">
+    <div className="relative aspect-[92/50] overflow-hidden rounded-md bg-gray-100">
       <Image src={asset} alt={title} fill className="object-cover" />
     </div>
   );

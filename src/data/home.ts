@@ -22,7 +22,7 @@ export const howWeHelpContent = {
       title: "Where and How to Enter and Why",
       description:
         "We identify the strongest market, buyer set, and entry path before you commit.",
-      asset: "/assets/Elements & Icons/Stage 01.svg",
+      asset: "/assets/Images - How We Work/Card 01 Image.png",
       reverseOnDesktop: false
     },
     {
@@ -30,7 +30,7 @@ export const howWeHelpContent = {
       title: "Anchor Partner Or Buyer",
       description:
         "Our BD & Partnerships teams secure early buyer, partner, or institutional interest before you set up locally.",
-      asset: "/assets/Elements & Icons/Stage 02.svg",
+      asset: "/assets/Images - How We Work/Card 03 Image.png",
       reverseOnDesktop: true
     },
     {
@@ -38,7 +38,7 @@ export const howWeHelpContent = {
       title: "Partners, Visibility & Capital",
       description:
         "We support investor, government, and ecosystem alignment where it helps the company grow.",
-      asset: "/assets/Elements & Icons/Stage 03.svg",
+      asset: "/assets/Images - How We Work/Card 02 Image.png",
       reverseOnDesktop: false
     }
   ]
