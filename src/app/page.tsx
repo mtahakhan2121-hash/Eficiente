@@ -1,4 +1,3 @@
-import { AudienceCard } from "@/components/AudienceCard";
 import { Container } from "@/components/Container";
 import { HeroSection } from "@/components/HeroSection";
 import { HowWeWorkSection } from "@/components/HowWeWorkSection";
@@ -8,7 +7,8 @@ import { ProjectCtaBanner } from "@/components/ProjectCtaBanner";
 import { SiteFooter } from "@/components/SiteFooter";
 import { SiteHeader } from "@/components/SiteHeader";
 import { TeamSection } from "@/components/TeamSection";
-import { audienceContent, footerContent, heroContent, howWeHelpContent, projectCtaContent } from "@/data/home";
+import { WhoWeWorkWithSection } from "@/components/WhoWeWorkWithSection";
+import { footerContent, heroContent, howWeHelpContent, projectCtaContent } from "@/data/home";
 import { footerNavigationLinks, navigationLinks, primaryNavigationCta } from "@/data/navigation";
 import { partnersSectionContent, partnerLogos } from "@/data/partners";
 import { portfolioItems, portfolioSectionContent } from "@/data/portfolio";
@@ -23,33 +23,7 @@ export default function HomePage() {
 
         <HowWeWorkSection {...howWeHelpContent} />
 
-        <section id="who-we-work-with" className="section-divider bg-blue-300 pb-16 pt-14 text-white md:pb-20 md:pt-20">
-          <Container>
-            <div className="mx-auto flex max-w-[1100px] flex-col items-center text-center">
-              <span className="inline-flex items-center gap-2 rounded-full border border-white/70 px-3 py-1 text-[12px] leading-[18px] text-white">
-                <span className="h-2 w-2 rounded-full bg-white" />
-                {audienceContent.eyebrow}
-              </span>
-              <h2 className="mt-6 max-w-[1100px] text-display-2-mobile font-medium leading-[120%] md:text-display-2">
-                For companies that need buyers, partners,{" "}
-                <br className="hidden md:block" />
-                and local traction in the GCC.
-              </h2>
-            </div>
-          </Container>
-          <div className="mx-auto mt-12 w-full max-w-[1360px] px-5 md:mt-16 md:px-8 xl:px-10">
-            <div className="grid gap-4 lg:grid-cols-12 lg:gap-6">
-              {audienceContent.items.map((item, index) => (
-                <div
-                  key={item.title}
-                  className={index === 0 ? "lg:col-span-6" : "lg:col-span-3"}
-                >
-                  <AudienceCard {...item} featured={index === 0} />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <WhoWeWorkWithSection />
 
         <PortfolioSection
           eyebrow={portfolioSectionContent.eyebrow}

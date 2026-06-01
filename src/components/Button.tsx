@@ -21,6 +21,7 @@ type ButtonProps = {
   size?: ButtonSize;
   icon?: "arrow";
   className?: string;
+  contentClassName?: string;
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
@@ -53,7 +54,7 @@ const variantClasses: Record<ButtonVariant, string> = {
   blueOutlineOnDark:
     "border-blue-300 bg-transparent text-blue-300 hover:border-blue-300 hover:bg-blue-400/18 hover:text-blue-300",
   teamPrimaryBlue:
-    "border-transparent bg-blue-300 text-white hover:border-blue-300 hover:bg-transparent hover:text-blue-300",
+    "border-[#245CE1] bg-[#245CE1] text-white hover:border-[#245CE1] hover:bg-transparent hover:text-[#245CE1]",
   secondaryLightOutline:
     "border-white/70 bg-transparent text-white hover:border-white hover:bg-white hover:text-blue-300"
 };
@@ -70,13 +71,14 @@ export function Button({
   size = "md",
   icon,
   className,
+  contentClassName,
   onClick
 }: ButtonProps) {
   const content = (
-    <>
+    <span className={cn("inline-flex items-center justify-center gap-2", contentClassName)}>
       <span>{label}</span>
       {icon === "arrow" ? <ArrowIcon /> : null}
-    </>
+    </span>
   );
 
   const classes = cn(

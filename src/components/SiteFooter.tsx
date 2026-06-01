@@ -5,6 +5,7 @@ import type { NavigationLink } from "@/data/navigation";
 
 import { Container } from "./Container";
 import { NewsletterForm } from "./NewsletterForm";
+import { ScrollReveal } from "./ScrollReveal";
 
 type SocialLink = {
   label: string;
@@ -38,7 +39,12 @@ export function SiteFooter({
     <footer className="bg-gray-400 py-14 text-white md:py-16">
       <Container>
         <div className="grid gap-10 md:grid-cols-12">
-          <div className="md:col-span-6">
+          <ScrollReveal
+            direction="left"
+            replay
+            durationMs={820}
+            className="md:col-span-6"
+          >
             <div className="flex items-center gap-3">
               <Image
                 src="/assets/Elements & Icons/Efficiente Icon.svg"
@@ -59,8 +65,14 @@ export function SiteFooter({
                 helperText={newsletterHelper}
               />
             </div>
-          </div>
-          <div className="md:col-span-2 md:col-start-8">
+          </ScrollReveal>
+          <ScrollReveal
+            direction="right"
+            replay
+            delayMs={120}
+            durationMs={820}
+            className="md:col-span-2 md:col-start-8"
+          >
             <p className="text-body-4-mobile uppercase tracking-[0.08em] text-white/78">
               Main Pages
             </p>
@@ -71,8 +83,14 @@ export function SiteFooter({
                 </li>
               ))}
             </ul>
-          </div>
-          <div className="md:col-span-3">
+          </ScrollReveal>
+          <ScrollReveal
+            direction="right"
+            replay
+            delayMs={220}
+            durationMs={820}
+            className="md:col-span-3"
+          >
             <div>
               <p className="text-body-4-mobile uppercase tracking-[0.08em] text-white/78">
                 Active Across
@@ -87,10 +105,10 @@ export function SiteFooter({
                 {contactEmail}
               </Link>
             </div>
-          </div>
+          </ScrollReveal>
         </div>
         <div className="mt-10 border-t border-white/30 pt-6 md:mt-12 md:flex md:items-center md:justify-between">
-          <div className="flex gap-3">
+          <ScrollReveal direction="left" replay delayMs={80} durationMs={860} className="flex gap-3">
             {socialLinks.map((link) => (
               <Link
                 key={link.label}
@@ -100,8 +118,16 @@ export function SiteFooter({
                 {link.label}
               </Link>
             ))}
-          </div>
-          <p className="mt-6 text-body-4-mobile text-white/65 md:mt-0">{copyright}</p>
+          </ScrollReveal>
+          <ScrollReveal
+            direction="right"
+            replay
+            delayMs={160}
+            durationMs={860}
+            className="mt-6 md:mt-0"
+          >
+            <p className="text-body-4-mobile text-white/65">{copyright}</p>
+          </ScrollReveal>
         </div>
       </Container>
     </footer>

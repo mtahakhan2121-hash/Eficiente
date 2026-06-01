@@ -73,7 +73,7 @@ export const audienceContent = {
 };
 
 export const projectCtaContent = {
-  title: "Got a Project in Mind",
+  title: "Got a Project in Mind?",
   primaryCta: {
     label: "Apply to Work With Us",
     href: "/#apply"

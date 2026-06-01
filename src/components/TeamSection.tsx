@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 import type { TeamMember } from "@/data/team";
 
@@ -29,9 +30,31 @@ export function TeamSection({
 
   return (
     <section id="team" className="relative overflow-hidden bg-gray-400 py-20 text-white md:py-30">
-      <div className="pointer-events-none absolute -bottom-10 left-[-80px] h-[180px] w-[180px] rotate-45 border border-blue-200/30 md:h-[240px] md:w-[240px]" />
-      <div className="pointer-events-none absolute -bottom-10 right-[-40px] h-[220px] w-[220px] rotate-45 border border-blue-200/30 md:h-[280px] md:w-[280px]" />
-      <Container>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-[150px] -left-[168px] h-[340px] w-[340px] md:-bottom-[224px] md:-left-[248px] md:h-[520px] md:w-[520px]"
+      >
+        <Image
+          src="/assets/Elements & Icons/Efficiente Icon.svg"
+          alt=""
+          fill
+          className="object-contain"
+          priority
+        />
+      </div>
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute -bottom-[160px] -right-[160px] h-[340px] w-[340px] md:-bottom-[238px] md:-right-[236px] md:h-[520px] md:w-[520px]"
+      >
+        <Image
+          src="/assets/Elements & Icons/Efficiente Icon.svg"
+          alt=""
+          fill
+          className="object-contain"
+          priority
+        />
+      </div>
+      <Container className="relative z-10">
         <SectionHeadingBlock
           eyebrow={eyebrow}
           title={title}
