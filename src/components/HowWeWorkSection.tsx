@@ -28,7 +28,7 @@ export function HowWeWorkSection({
   const titleLines = title.split(". ").filter(Boolean);
 
   return (
-    <section id="how-we-work" className="section-divider relative overflow-hidden bg-gray-50 pb-24 pt-24 md:pb-30 md:pt-[132px]">
+    <section id="how-we-work" className="section-divider relative bg-gray-50 pb-24 pt-24 md:pb-30 md:pt-[132px]">
       <SectionTicker />
       <div className="mx-auto max-w-[1440px] px-5 md:px-8 xl:px-16">
         {/* Header */}
