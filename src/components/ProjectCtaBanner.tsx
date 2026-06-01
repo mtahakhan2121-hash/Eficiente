@@ -1,6 +1,7 @@
 import { Button } from "./Button";
 import { Container } from "./Container";
 import { ScrollReveal } from "./ScrollReveal";
+import { SectionTicker } from "./SectionTicker";
 
 type ProjectCtaBannerProps = {
   title: string;
@@ -22,6 +23,7 @@ export function ProjectCtaBanner({
 }: ProjectCtaBannerProps) {
   return (
     <section id="apply" className="grain-bg py-16 text-white md:py-20">
+      <SectionTicker />
       <Container className="max-w-[1580px] xl:px-12">
         <div className="grid gap-8 md:grid-cols-12 md:items-end">
           <ScrollReveal

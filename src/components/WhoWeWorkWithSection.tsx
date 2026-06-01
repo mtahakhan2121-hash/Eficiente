@@ -7,6 +7,7 @@ import { cn } from "@/lib/cn";
 
 import { AudienceCard } from "./AudienceCard";
 import { Container } from "./Container";
+import { SectionTicker } from "./SectionTicker";
 
 export function WhoWeWorkWithSection() {
   const sectionRef = useRef<HTMLElement | null>(null);
@@ -51,6 +52,7 @@ export function WhoWeWorkWithSection() {
         isActive && "who-reveal-active"
       )}
     >
+      <SectionTicker />
       <Container>
         <div className="mx-auto flex max-w-[1100px] flex-col items-center text-center">
           <div

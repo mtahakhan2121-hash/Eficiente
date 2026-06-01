@@ -1,5 +1,6 @@
 import { Container } from "./Container";
 import { SectionEyebrow } from "./SectionEyebrow";
+import { SectionTicker } from "./SectionTicker";
 
 type PartnersSectionProps = {
   eyebrow: string;
@@ -15,7 +16,8 @@ export function PartnersSection({
   const marqueeLogos = [...logos, ...logos];
 
   return (
-    <section id="partners" className="section-divider bg-gray-50 py-20 md:py-28">
+    <section id="partners" className="section-divider relative overflow-hidden bg-gray-50 py-20 md:py-28">
+      <SectionTicker />
       <Container className="max-w-[1420px]">
         <div className="mx-auto flex max-w-[820px] flex-col items-center gap-4 text-center">
           <SectionEyebrow label={eyebrow} />
